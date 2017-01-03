@@ -1,0 +1,33 @@
+﻿<style>
+    input.ng-invalid.ng-dirty {
+        background-color: red;
+        border-width: 2px;
+    }
+</style>
+<form [formGroup]="myform" novalidate (ngSubmit)="salva()">
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="nome" placeholder="nome" />
+        <span [hidden]="myform.controls.nome.valid">Obbligatorio</span>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="cognome" placeholder="cognome" />
+        <span [hidden]="myform.controls.cognome.valid">Obbligatorio</span>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="email" placeholder="email" />
+        <span [hidden]="myform.controls.email.valid">Email non corretta</span>
+    </div>
+    <div class="form-group" formGroupName="indirizzo">
+        <input type="text" class="form-control" formControlName="via" placeholder="indirizzo" />
+        <span [hidden]="myform.controls.indirizzo.controls.via.valid">Obbligatorio</span>
+    </div>
+    <div class="form-group" formGroupName="indirizzo">
+        <input type="text" class="form-control" formControlName="civico" placeholder="civico" />
+        <span [hidden]="myform.controls.indirizzo.controls.civico.valid">Civico non corretto</span>
+    </div>
+    <div class="form-group" formGroupName="indirizzo">
+        <input type="text" class="form-control" formControlName="citta" placeholder="città" />
+        <span [hidden]="myform.controls.indirizzo.controls.citta.valid">Città non corretta (Roma, Milano o Napoli)</span>
+    </div>
+    <input type="submit" [disabled]="!myform.valid" value="salva" class="btn" />
+</form>

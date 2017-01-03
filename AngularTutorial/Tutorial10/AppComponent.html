@@ -1,0 +1,20 @@
+﻿<h2>Validatori</h2>
+<style>
+    input.ng-invalid.ng-dirty {
+        background-color: red;
+        border-width: 2px;
+    }
+</style>
+<form #f="ngForm">
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="testo1" name="txt1" required="" placeholder="testo obbligatorio" />
+        <span [hidden]="f.controls.txt1?.valid">Obbligatorio</span>
+
+    </div>
+    <p>{{testo1}}</p>
+    <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="testo2" name="txt2" required="" maxlength="10" placeholder="lunghezza minima 10" />
+        <span [hidden]="f.controls.txt2?.valid">Obbligatorio e con lunghezza minore di 10</span>
+    </div>
+    <input type="submit" [disabled]="!f.valid" class="btn" />
+</form>

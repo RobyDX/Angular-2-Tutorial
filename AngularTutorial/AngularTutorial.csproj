@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{519B0FDE-795D-47FE-91C6-5B6153D1978B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularTutorial</RootNamespace>
+    <AssemblyName>AngularTutorial</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="Tutorial10\AppComponent.html" />
+    <Content Include="Tutorial10\index.html" />
+    <Content Include="Tutorial10\systemjs.config.js" />
+    <Content Include="Tutorial03\AppComponent.html" />
+    <Content Include="Tutorial04\AppComponent.html" />
+    <Content Include="Tutorial04\index.html" />
+    <Content Include="Tutorial04\systemjs.config.js" />
+    <Content Include="Tutorial05\AppComponent.html" />
+    <Content Include="Tutorial05\index.html" />
+    <Content Include="Tutorial05\systemjs.config.js" />
+    <Content Include="Tutorial05\tablerow.component.html" />
+    <Content Include="Tutorial06\AppComponent.html" />
+    <Content Include="Tutorial06\index.html" />
+    <Content Include="Tutorial06\systemjs.config.js" />
+    <Content Include="Tutorial07\AppComponent.html" />
+    <Content Include="Tutorial07\index.html" />
+    <Content Include="Tutorial07\systemjs.config.js" />
+    <Content Include="Tutorial08\AppComponent.html" />
+    <Content Include="Tutorial08\index.html" />
+    <Content Include="Tutorial08\systemjs.config.js" />
+    <Content Include="Tutorial09\AppComponent.html" />
+    <Content Include="Tutorial09\index.html" />
+    <Content Include="Tutorial09\systemjs.config.js" />
+    <Content Include="Tutorial11\AppComponent.html" />
+    <Content Include="Tutorial11\index.html" />
+    <Content Include="Tutorial11\systemjs.config.js" />
+    <Content Include="Tutorial12\AppComponent.html" />
+    <Content Include="Tutorial12\index.html" />
+    <Content Include="Tutorial12\systemjs.config.js" />
+    <Content Include="Tutorial13\AppComponent.html" />
+    <Content Include="Tutorial13\index.html" />
+    <Content Include="Tutorial13\systemjs.config.js" />
+    <Content Include="Tutorial14\AppComponent2.html" />
+    <Content Include="Tutorial14\AppComponent.html" />
+    <Content Include="Tutorial14\index.html" />
+    <Content Include="Tutorial14\systemjs.config.js" />
+    <Content Include="Tutorial15\AppComponent.html" />
+    <Content Include="Tutorial15\index.html" />
+    <Content Include="Tutorial15\systemjs.config.js" />
+    <Content Include="Tutorial16\appcomponent.html" />
+    <Content Include="Tutorial16\index.html" />
+    <Content Include="Tutorial16\systemjs.config.js" />
+    <Content Include="Tutorial17\AppComponent.html" />
+    <Content Include="Tutorial17\index.html" />
+    <Content Include="Tutorial17\systemjs.config.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tutorial01\index.html" />
+    <Content Include="Tutorial01\systemjs.config.js" />
+    <Content Include="Tutorial02\index.html" />
+    <Content Include="Tutorial02\systemjs.config.js" />
+    <Content Include="Tutorial03\index.html" />
+    <Content Include="Tutorial03\systemjs.config.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Tutorial10\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial10\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial10\main.ts" />
+    <TypeScriptCompile Include="Tutorial01\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial01\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial01\main.ts" />
+    <TypeScriptCompile Include="Tutorial02\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial02\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial02\main.ts" />
+    <TypeScriptCompile Include="Tutorial03\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial03\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial03\main.ts" />
+    <TypeScriptCompile Include="Tutorial04\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial04\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial04\main.ts" />
+    <TypeScriptCompile Include="Tutorial05\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial05\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial05\main.ts" />
+    <TypeScriptCompile Include="Tutorial05\Persona.ts" />
+    <TypeScriptCompile Include="Tutorial05\tablerow.component.ts" />
+    <TypeScriptCompile Include="Tutorial06\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial06\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial06\main.ts" />
+    <TypeScriptCompile Include="Tutorial07\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial07\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial07\colorbox.directive.ts" />
+    <TypeScriptCompile Include="Tutorial07\main.ts" />
+    <TypeScriptCompile Include="Tutorial08\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial08\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial08\main.ts" />
+    <TypeScriptCompile Include="Tutorial09\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial09\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial09\main.ts" />
+    <TypeScriptCompile Include="Tutorial09\persona.ts" />
+    <TypeScriptCompile Include="Tutorial09\userpipe.ts" />
+    <TypeScriptCompile Include="Tutorial11\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial11\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial11\main.ts" />
+    <TypeScriptCompile Include="Tutorial12\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial12\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial12\main.ts" />
+    <TypeScriptCompile Include="Tutorial13\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial13\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial13\app.service.ts" />
+    <TypeScriptCompile Include="Tutorial13\main.ts" />
+    <TypeScriptCompile Include="Tutorial14\app.component2.ts" />
+    <TypeScriptCompile Include="Tutorial14\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial14\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial14\app.service.ts" />
+    <TypeScriptCompile Include="Tutorial14\main.ts" />
+    <TypeScriptCompile Include="Tutorial15\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial15\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial15\app.service.ts" />
+    <TypeScriptCompile Include="Tutorial15\main.ts" />
+    <TypeScriptCompile Include="Tutorial16\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial16\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial16\app.service.ts" />
+    <TypeScriptCompile Include="Tutorial16\main.ts" />
+    <TypeScriptCompile Include="Tutorial17\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial17\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial17\main.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54452</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54452/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

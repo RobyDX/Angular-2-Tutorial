@@ -1,0 +1,44 @@
+﻿<h2>Date</h2>
+<div class="form-group">
+    <input type="date" [(ngModel)]="dataNascita" />
+</div>
+<div class="form-group">
+    {{dataNascita}}
+</div>
+<div class="form-group">
+    {{dataNascita | date}}
+</div>
+<div class="form-group">
+    {{dataNascita | date:'dd/MM/yyyy'}}
+</div>
+<hr />
+<h2>Money</h2>
+<div class="form-group">
+    <input type="number" [(ngModel)]="money" />
+</div>
+<div class="form-group">
+    {{money}}
+</div>
+<div class="form-group">
+    {{money | currency:'EUR'}}
+</div>
+<hr />
+<h2>Testo Maiuscolo</h2>
+<div class="form-group">
+    <input type="text" [(ngModel)]="testo" />
+</div>
+<div class="form-group">
+    {{testo}}
+</div>
+<div class="form-group">
+    {{testo | uppercase}}
+</div>
+<hr />
+<h2>Plurale</h2>
+<div class="form-group">
+    <input type="text" [(ngModel)]="numero" />
+</div>
+
+<div class="form-group">
+    {{numero | i18nPlural:opzioni}}
+</div>

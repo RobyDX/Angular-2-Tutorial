@@ -1,0 +1,39 @@
+﻿<style>
+    .valid {
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    .invalid {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+    }
+</style>
+<div class="form-group">
+    <span>NG Switch</span>
+    <select [(ngModel)]="panelId">
+        <option *ngFor="let i of options" [value]="i.value">{{i.text}}</option>
+    </select>
+</div>
+<div [ngSwitch]="panelId">
+
+    <div class="form-group" *ngSwitchCase="'1'">
+        <span>NG Class</span>
+        <input type="checkbox" [(ngModel)]="checked" />
+        <span [ngClass]="{'valid':checked,'invalid':!checked}">
+            {{checked}}
+        </span>
+    </div>
+    <div class="form-group" *ngSwitchCase="'2'">
+        <span>NG Style</span>
+        <input type="button" value="+" (click)="size = size + 2" class="btn" />
+        <input type="button" value="-" (click)="size = size - 2" class="btn" />
+        <span [ngStyle]="{'font-size':size}">
+            {{size}}
+        </span>
+    </div>
+</div>
