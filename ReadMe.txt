@@ -1,8 +1,12 @@
+Qui potrete trovare una lista di tutorial in stile Minimale per Angular2 sotto Visual Studio.
+
+
 Requisiti:
 NodeJs: https://nodejs.org/en/
 Ultimo Compiler per TypeScript: https://www.microsoft.com/it-it/download/details.aspx?id=48593
 
-Da prompt di comando lanciare il comando npm install per creare e popolare la cartella node_modules
+Da prompt di comando posizionarsi nella cartella del progetto (dove trovare il file package.json) e lanciare il comando npm install 
+per creare e popolare la cartella node_modules
 
 Tutorial
 1)Hello World
@@ -22,3 +26,7 @@ Tutorial
 15)HTTP e Chiamate REST
 16)Routing
 17)Librerie Javascript
+
+
+Roberto Nacchia (RobyDx)
+http://www.notjustcode.it
