@@ -26,6 +26,7 @@ Tutorial
 15)HTTP e Chiamate REST
 16)Routing
 17)Librerie Javascript
+18)ControlValueAccessor
 
 
 Roberto Nacchia (RobyDx)

@@ -130,6 +130,10 @@
     <Content Include="Tutorial02\systemjs.config.js" />
     <Content Include="Tutorial03\index.html" />
     <Content Include="Tutorial03\systemjs.config.js" />
+    <Content Include="Tutorial18\AppComponent.html" />
+    <Content Include="Tutorial18\datepicker.html" />
+    <Content Include="Tutorial18\index.html" />
+    <Content Include="Tutorial18\systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -196,7 +200,11 @@
     <TypeScriptCompile Include="Tutorial16\main.ts" />
     <TypeScriptCompile Include="Tutorial17\app.component.ts" />
     <TypeScriptCompile Include="Tutorial17\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial18\DatePickerComponent.ts" />
     <TypeScriptCompile Include="Tutorial17\main.ts" />
+    <TypeScriptCompile Include="Tutorial18\app.component.ts" />
+    <TypeScriptCompile Include="Tutorial18\app.module.ts" />
+    <TypeScriptCompile Include="Tutorial18\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
