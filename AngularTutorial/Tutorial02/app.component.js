@@ -24,9 +24,9 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: "my-app",
-        template: "<p><input [(ngModel)]='text' placeholder='Inserisci un testo'/></p>" +
-            "<p>Testo: {{text}}</p>" +
-            "<p>Lunghezza: {{GetLength()}}</p>" +
+        template: "<p><input [(ngModel)]='text' placeholder='Insert Text'/></p>" +
+            "<p>Text: {{text}}</p>" +
+            "<p>Length: {{GetLength()}}</p>" +
             "<p><button (click)='ClearData()'>Clear</button></p>"
     }),
     __metadata("design:paramtypes", [])

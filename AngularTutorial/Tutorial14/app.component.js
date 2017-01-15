@@ -18,12 +18,12 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this.myform = this.fb.group({
-            "nome": ["", forms_1.Validators.required],
-            "cognome": ["", forms_1.Validators.required],
+            "name": ["", forms_1.Validators.required],
+            "surname": ["", forms_1.Validators.required],
         });
     };
-    AppComponent.prototype.salva = function () {
-        this.service.Salva(this.myform.value);
+    AppComponent.prototype.save = function () {
+        this.service.Save(this.myform.value);
     };
     return AppComponent;
 }());

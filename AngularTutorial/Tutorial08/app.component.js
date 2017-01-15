@@ -11,10 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.dataNascita = new Date(1980, 1 / 17);
+        this.date = new Date(1980, 1 / 17);
         this.money = 0;
-        this.numero = 0;
-        this.opzioni = { '=0': 'Nessuna Mela', '=1': 'Una mela', 'other': '# mele' };
+        this.numbers = 0;
+        this.options = { "=0": "No Item", "=1": "One Item", "other": "# Items" };
     }
     return AppComponent;
 }());

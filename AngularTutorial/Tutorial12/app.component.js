@@ -10,13 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
-["use strict"];
 function validateCities(citynames) {
+    "use strict";
     return function (c) {
         for (var _i = 0, citynames_1 = citynames; _i < citynames_1.length; _i++) {
             var i = citynames_1[_i];
-            if (c.value.toLowerCase() == i)
+            if (c.value.toLowerCase() == i) {
                 return null;
+            }
         }
         return {
             validateCities: {
@@ -33,19 +34,18 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this.myform = this.fb.group({
-            "nome": ["", forms_1.Validators.required],
-            "cognome": ["", forms_1.Validators.required],
+            "name": ["", forms_1.Validators.required],
+            "surname": ["", forms_1.Validators.required],
             "email": ["", [forms_1.Validators.required, forms_1.Validators.pattern(this.emailRegex)]],
-            "indirizzo": this.fb.group({
-                "via": ['', forms_1.Validators.required],
-                "civico": ['', [forms_1.Validators.required, forms_1.Validators.pattern(this.civicoRegex)]],
-                "citta": ['', [forms_1.Validators.required, validateCities(["roma", "milano", "napoli"])]]
+            "address": this.fb.group({
+                "street": ["", forms_1.Validators.required],
+                "number": ["", [forms_1.Validators.required, forms_1.Validators.pattern(this.civicoRegex)]],
+                "city": ["", [forms_1.Validators.required, validateCities(["rome", "new york", "paris"])]]
             })
         });
     };
-    AppComponent.prototype.salva = function () {
-        alert(this.myform.value.email);
-        alert(this.myform.value.indirizzo.via);
+    AppComponent.prototype.save = function () {
+        alert("Done");
     };
     return AppComponent;
 }());

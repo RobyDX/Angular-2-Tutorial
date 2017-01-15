@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from "@angular/core";
-import {FormBuilder, Validators, FormGroup} from "@angular/forms";
-import { AppService } from './app.service';
+import { FormBuilder, Validators, FormGroup } from "@angular/forms";
+import { AppService } from "./app.service";
 
 @Component({
     selector: "my-app",
@@ -13,16 +13,16 @@ export class AppComponent implements OnInit {
 
     }
 
-    ngOnInit() {
+    ngOnInit(): any {
         this.myform = this.fb.group(
             {
-                "nome": ["", Validators.required],
-                "cognome": ["", Validators.required],
+                "name": ["", Validators.required],
+                "surname": ["", Validators.required],
             });
     }
 
 
-    salva(): void {
-        this.service.Salva(this.myform.value);
+    save(): void {
+        this.service.Save(this.myform.value);
     }
 }

@@ -9,10 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var persona_1 = require("./persona");
+var person_1 = require("./person");
 var AppComponent = (function () {
     function AppComponent() {
-        this.user = new persona_1.Persona("Roberto", "Nacchia", persona_1.Sesso.Maschio);
+        this.user = new person_1.Person("Roberto", "Nacchia", person_1.Gender.Male);
+        this.options = new Array();
+        this.options.push({ value: person_1.Gender.Male, text: "Male" });
+        this.options.push({ value: person_1.Gender.Female, text: "Female" });
     }
     return AppComponent;
 }());

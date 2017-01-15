@@ -3,16 +3,15 @@
 @Component({
     selector: "my-app",
     template:
-    "<p><input [(ngModel)]='text' placeholder='Inserisci un testo'/></p>" +
-    "<p>Testo: {{text}}</p>" +
-    "<p>Lunghezza: {{GetLength()}}</p>" +
+    "<p><input [(ngModel)]='text' placeholder='Insert Text'/></p>" +
+    "<p>Text: {{text}}</p>" +
+    "<p>Length: {{GetLength()}}</p>" +
     "<p><button (click)='ClearData()'>Clear</button></p>"
 })
 export class AppComponent {
 
     text: string = "";
-    GetLength(): number
-    {
+    GetLength(): number {
         return this.text.length;
     }
 

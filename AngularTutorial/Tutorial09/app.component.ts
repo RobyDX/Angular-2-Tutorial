@@ -1,14 +1,17 @@
 ﻿import { Component } from "@angular/core";
-import {Persona, Sesso } from "./persona"
-import {UserPipe} from "./userpipe"
-
+import { Person, Gender } from "./person";
 
 @Component({
     selector: "my-app",
     templateUrl: "AppComponent.html"
 })
 export class AppComponent {
-    user: Persona = new Persona("Roberto", "Nacchia", Sesso.Maschio);
+    user: Person = new Person("Roberto", "Nacchia", Gender.Male);
+    options: Array<any> = new Array<any>();
 
+    constructor() {
+        this.options.push({ value: Gender.Male, text: "Male" });
+        this.options.push({ value: Gender.Female, text: "Female" });
+    }
 
 }

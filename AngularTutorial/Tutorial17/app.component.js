@@ -21,12 +21,11 @@ var AppComponent = (function () {
     function AppComponent(ref, element) {
         this.ref = ref;
         this.element = element;
-        this.messaggio = "";
+        this.message = "";
     }
     AppComponent.prototype.ShowMessage = function () {
-        this.messaggio = "overlay";
         this.ref.detectChanges();
-        $('#myModal').modal('show');
+        $("#myModal").modal("show");
     };
     return AppComponent;
 }());

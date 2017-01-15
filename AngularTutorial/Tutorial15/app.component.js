@@ -15,11 +15,11 @@ var AppComponent = (function () {
         this.service = service;
         this.countries = [];
     }
-    AppComponent.prototype.ngOnInit = function () {
-    };
-    AppComponent.prototype.aggiorna = function () {
+    AppComponent.prototype.Refresh = function () {
         var _this = this;
-        this.service.Aggiorna().subscribe(function (i) { _this.countries = i.json().RestResponse.result; });
+        this.service.Refresh().subscribe(function (i) {
+            _this.countries = i.json();
+        });
     };
     return AppComponent;
 }());

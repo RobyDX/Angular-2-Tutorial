@@ -1,27 +1,27 @@
 ﻿import { Component } from "@angular/core";
-import {Persona} from "./Persona"
+import { Person } from "./Person"
 
 @Component({
     selector: "my-app",
     templateUrl: "AppComponent.html"
 })
 export class AppComponent {
-    items: Persona[] = [];
+    items: Person[] = [];
 
-    Aggiungi(nome: HTMLInputElement, cognome: HTMLInputElement): void {
+    Add(name: HTMLInputElement, surname: HTMLInputElement): void {
 
-        if (nome.validity.valid && cognome.validity.valid) {
-            this.items.push(new Persona(nome.value, cognome.value));
-            nome.value = "";
-            cognome.value = "";
+        if (name.validity.valid && surname.validity.valid) {
+            this.items.push(new Person(name.value, surname.value));
+            name.value = "";
+            surname.value = "";
 
         } else {
-            alert("Popolare i campi nome e cognome");
+            alert("Populate fields");
         }
     }
 
-    Elimina(persona: Persona): void {
-        var i= this.items.findIndex(p => { return p === persona});
-        this.items.splice(i, 1);        
+    Delete(person: Person): void {
+        var i = this.items.findIndex(p => { return p === person });
+        this.items.splice(i, 1);
     }
 }

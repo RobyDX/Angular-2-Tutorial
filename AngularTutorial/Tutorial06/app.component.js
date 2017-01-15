@@ -9,14 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var Persona = (function () {
-    function Persona() {
-        this.nome = "";
-        this.cognome = "";
-    }
-    return Persona;
-}());
-exports.Persona = Persona;
 var AppComponent = (function () {
     function AppComponent() {
         this.panelId = 1;

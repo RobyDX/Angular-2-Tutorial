@@ -20,17 +20,17 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this.myform = this.fb.group({
-            "nome": ["", forms_1.Validators.required],
-            "cognome": ["", forms_1.Validators.required],
+            "name": ["", forms_1.Validators.required],
+            "surname": ["", forms_1.Validators.required],
             "email": ["", [forms_1.Validators.required, forms_1.Validators.pattern(this.emailRegex)]],
-            "indirizzo": this.fb.group({
-                "via": ['', forms_1.Validators.required],
-                "civico": ['', [forms_1.Validators.required, forms_1.Validators.pattern(this.civicoRegex)]],
+            "address": this.fb.group({
+                "street": ["", forms_1.Validators.required],
+                "number": ["", [forms_1.Validators.required, forms_1.Validators.pattern(this.civicoRegex)]],
             })
         });
     };
-    AppComponent.prototype.salva = function () {
-        this.service.Salva(this.myform.value);
+    AppComponent.prototype.save = function () {
+        this.service.Save(this.myform.value);
     };
     return AppComponent;
 }());

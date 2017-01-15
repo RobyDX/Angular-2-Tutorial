@@ -9,31 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var Persona = (function () {
-    function Persona(nome, cognome) {
-        this.nome = "";
-        this.cognome = "";
-        this.nome = nome;
-        this.cognome = cognome;
+var Person = (function () {
+    function Person(name, surname) {
+        this.name = "";
+        this.surname = "";
+        this.name = name;
+        this.surname = surname;
     }
-    return Persona;
+    return Person;
 }());
-exports.Persona = Persona;
+exports.Person = Person;
 var AppComponent = (function () {
     function AppComponent() {
         this.items = [];
     }
-    AppComponent.prototype.Aggiungi = function (nome, cognome) {
-        if (nome.validity.valid && cognome.validity.valid) {
-            this.items.push(new Persona(nome.value, cognome.value));
-            nome.value = "";
-            cognome.value = "";
+    AppComponent.prototype.Add = function (name, surname) {
+        if (name.validity.valid && surname.validity.valid) {
+            this.items.push(new Person(name.value, surname.value));
+            name.value = "";
+            surname.value = "";
         }
         else {
-            alert("Popolare i campi nome e cognome");
+            alert("Populate fields");
         }
     };
-    AppComponent.prototype.Elimina = function (index) {
+    AppComponent.prototype.Delete = function (index) {
         this.items.splice(index, 1);
     };
     return AppComponent;

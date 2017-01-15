@@ -1,15 +1,16 @@
 ﻿import { Component, OnInit } from "@angular/core";
-import {FormBuilder, Validators, FormGroup, FormControl} from "@angular/forms";
-["use strict"]
-function validateCities(citynames: string[]) {
+import { FormBuilder, Validators, FormGroup, FormControl } from "@angular/forms";
+
+function validateCities(citynames: string[]): any {
+    "use strict";
     return (c: FormControl) => {
 
-        for (let i of citynames)
-        {
-            if ((c.value as string).toLowerCase() == i)
+        for (let i of citynames) {
+            if ((c.value as string).toLowerCase() == i) {
                 return null;
+            }
         }
-        
+
         return {
             validateCities: {
                 valid: false
@@ -35,23 +36,22 @@ export class AppComponent implements OnInit {
 
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.myform = this.fb.group(
             {
-                "nome": ["", Validators.required],
-                "cognome": ["", Validators.required],
+                "name": ["", Validators.required],
+                "surname": ["", Validators.required],
                 "email": ["", [Validators.required, Validators.pattern(this.emailRegex)]],
-                "indirizzo": this.fb.group({
-                    "via": ['', <any>Validators.required],
-                    "civico": ['', [<any>Validators.required, <any>Validators.pattern(this.civicoRegex)]],
-                    "citta": ['', [Validators.required, validateCities(["roma", "milano", "napoli"])]]
+                "address": this.fb.group({
+                    "street": ["", <any>Validators.required],
+                    "number": ["", [<any>Validators.required, <any>Validators.pattern(this.civicoRegex)]],
+                    "city": ["", [Validators.required, validateCities(["rome", "new york", "paris"])]]
                 })
             });
     }
 
 
-    salva(): void {
-        alert(this.myform.value.email);
-        alert(this.myform.value.indirizzo.via);
+    save(): void {
+        alert("Done");
     }
 }

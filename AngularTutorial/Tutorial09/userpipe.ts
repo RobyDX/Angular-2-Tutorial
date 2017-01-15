@@ -1,27 +1,28 @@
-﻿import { Pipe, PipeTransform } from '@angular/core';
-import {Persona, Sesso} from './persona'
+﻿import { Pipe, PipeTransform } from "@angular/core";
+import { Person, Gender } from "./person";
 
 @Pipe(
     {
-        name: 'userpipe',
+        name: "userpipe",
         pure: false,
     })
 export class UserPipe implements PipeTransform {
-    transform(value: Persona, args: string): any {
+    transform(value: Person, args: string): any {
 
-        if (!value) return value;
+        if (!value) { return value; };
 
-        var part = "";
-        if (args == 'am') {
-            if (value.sesso == Sesso.Maschio)
-                return "Buongiorno signor " + value.nome + " " + value.cognome;
-            else
-                return "Buongiorno signora " + value.nome + " " + value.cognome;
+        if (args === "am") {
+            if (value.gender == Gender.Male) {
+                return "Good Morning MR " + value.name + " " + value.surname;
+            } else {
+                return "Good Morning MRS " + value.name + " " + value.surname;
+            }
         } else {
-            if (value.sesso == Sesso.Maschio)
-                return "Buonasera signor " + value.nome + " " + value.cognome;
-            else
-                return "Buonasera signora " + value.nome + " " + value.cognome;
+            if (value.gender == Gender.Male) {
+                return "Good Evening MR " + value.name + " " + value.surname;
+            } else {
+                return "Good Evening MRS " + value.name + " " + value.surname;
+            }
         }
     }
 }

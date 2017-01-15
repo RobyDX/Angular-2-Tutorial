@@ -1,7 +1,6 @@
 ﻿import { Component, OnInit } from "@angular/core";
-import {FormBuilder, Validators, FormGroup} from "@angular/forms";
-import { AppService } from './app.service';
-import {Http} from '@angular/http'
+import { FormBuilder, FormGroup } from "@angular/forms";
+import { AppService } from "./app.service";
 
 @Component({
     selector: "my-app2",
@@ -13,10 +12,10 @@ export class AppComponent2 implements OnInit {
     items: Array<any> = [];
 
     constructor(private fb: FormBuilder, private service: AppService) {
-        
+
     }
 
-    ngOnInit() {
+    ngOnInit(): any {
         this.items = this.service.modelsaved;
     }
 }

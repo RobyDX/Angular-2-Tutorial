@@ -1,16 +1,15 @@
 ﻿import { Component, Input, Output, EventEmitter } from "@angular/core";
-import {Persona} from "./Persona"
+import { Person } from "./Person";
 
 @Component({
     selector: "tablerow",
     templateUrl: "tablerow.component.html",
 })
 export class TableRowComponent {
-    @Input() datarow: Persona;
+    @Input() datarow: Person;
     @Output() delete: EventEmitter<any> = new EventEmitter();
 
-    Elimina(): void
-    {
+    Delete(): void {
         this.delete.emit(this.datarow);
     }
 }

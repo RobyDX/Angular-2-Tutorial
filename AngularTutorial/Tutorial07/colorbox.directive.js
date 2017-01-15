@@ -17,36 +17,36 @@ var ColorBox = (function () {
     ColorBox.prototype.onClick = function () {
         var size = this.el.nativeElement.value.length;
         if (size > 20) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'red'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'red'");
         }
         else if (size > 15) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'violet'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'violet'");
         }
         else if (size > 10) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'orange'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'orange'");
         }
         else if (size > 5) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'yellow'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'yellow'");
         }
         else {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'green'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'green'");
         }
     };
     return ColorBox;
 }());
 __decorate([
-    core_1.Input('colorbox'),
+    core_1.Input("colorbox"),
     __metadata("design:type", String)
 ], ColorBox.prototype, "color", void 0);
 __decorate([
-    core_1.HostListener('keyup'),
+    core_1.HostListener("keyup"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], ColorBox.prototype, "onClick", null);
 ColorBox = __decorate([
     core_1.Directive({
-        selector: '[colorbox]'
+        selector: "[colorbox]"
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
 ], ColorBox);

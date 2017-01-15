@@ -2,14 +2,13 @@
 
 @Component({
     selector: "my-app",
-    template: "<h1 (click)='AggiornaData()' >{{text}}</h1>"
+    template: "<h1>{{text}}</h1><button (click)='RefreshData()'>Update</button>"
 })
 export class AppComponent {
-    
-    text: string = "Clicca per aggiornare";
 
-    AggiornaData(): void
-    {
-        this.text = "(Clicca per aggiornare)Sono le " + new Date().toLocaleTimeString("it-IT");
+    text: string = "Click To Update";
+
+    RefreshData(): void {
+        this.text = new Date().toLocaleTimeString("it-IT");
     }
 }

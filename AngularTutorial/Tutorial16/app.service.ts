@@ -1,30 +1,29 @@
-﻿import { Injectable } from '@angular/core';
-import {Http, Response } from '@angular/http';
-import { Observable}     from 'rxjs/Observable';
+﻿import { Injectable } from "@angular/core";
+import { Http } from "@angular/http";
 
-export class Utente {
-    nome: string;
-    cognome: string;
+export class User {
+    name: string;
+    surname: string;
 
-    constructor(nome: string, cognome: string) {
-        this.nome = nome;
-        this.cognome = cognome;
+    constructor(name: string, surname: string) {
+        this.name = name;
+        this.surname = surname;
     }
 }
 
 @Injectable()
 export class AppService {
 
-    utenti: Utente[] = [];
+    users: User[] = [];
 
     constructor(private http: Http) {
-        this.utenti.push(new Utente("Mario", "Rossi"));
-        this.utenti.push(new Utente("Giuseppe", "Bianchi"));
-        this.utenti.push(new Utente("Carlo", "Verdi"));
-        this.utenti.push(new Utente("Antonio", "Rossi"));
+        this.users.push(new User("John", "Doe"));
+        this.users.push(new User("Richard", "Miles"));
+        this.users.push(new User("Mary", "Major"));
+        this.users.push(new User("Jane", "Roe"));
     }
 
-    GetUtentByID(id: number): Utente {
-        return this.utenti[id];
+    GetUserByID(id: number): User {
+        return this.users[id];
     }
 }

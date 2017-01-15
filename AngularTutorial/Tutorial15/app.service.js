@@ -14,8 +14,8 @@ var AppService = (function () {
     function AppService(http) {
         this.http = http;
     }
-    AppService.prototype.Aggiorna = function () {
-        return this.http.get('http://services.groupkt.com/country/get/all');
+    AppService.prototype.Refresh = function () {
+        return this.http.get("https://restcountries.eu/rest/v1/all");
     };
     return AppService;
 }());

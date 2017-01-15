@@ -9,32 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var persona_1 = require("./persona");
+var person_1 = require("./person");
 var UserPipe = (function () {
     function UserPipe() {
     }
     UserPipe.prototype.transform = function (value, args) {
-        if (!value)
+        if (!value) {
             return value;
-        var part = "";
-        if (args == 'am') {
-            if (value.sesso == persona_1.Sesso.Maschio)
-                return "Buongiorno signor " + value.nome + " " + value.cognome;
-            else
-                return "Buongiorno signora " + value.nome + " " + value.cognome;
+        }
+        ;
+        if (args === "am") {
+            if (value.gender == person_1.Gender.Male) {
+                return "Good Morning MR " + value.name + " " + value.surname;
+            }
+            else {
+                return "Good Morning MRS " + value.name + " " + value.surname;
+            }
         }
         else {
-            if (value.sesso == persona_1.Sesso.Maschio)
-                return "Buonasera signor " + value.nome + " " + value.cognome;
-            else
-                return "Buonasera signora " + value.nome + " " + value.cognome;
+            if (value.gender == person_1.Gender.Male) {
+                return "Good Evening MR " + value.name + " " + value.surname;
+            }
+            else {
+                return "Good Evening MRS " + value.name + " " + value.surname;
+            }
         }
     };
     return UserPipe;
 }());
 UserPipe = __decorate([
     core_1.Pipe({
-        name: 'userpipe',
+        name: "userpipe",
         pure: false,
     }),
     __metadata("design:paramtypes", [])

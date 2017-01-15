@@ -1,9 +1,13 @@
 ﻿<div class="form-group">
-    <input type="text" [(ngModel)]="user.nome" class="form-control" />
-    <input type="text" [(ngModel)]="user.cognome" class="form-control" />
-    <select [(ngModel)]="user.sesso" class="form-control">
-        <option value="1" selected="selected">Maschio</option>
-        <option value="2">Femmina</option>
+    <input type="text" [(ngModel)]="user.name" class="form-control" />
+    <input type="text" [(ngModel)]="user.surname" class="form-control" />
+    <select [(ngModel)]="user.gender" class="form-control">
+        <option *ngFor="let i of options"
+                [value]="i.value">
+            {{i.text}}
+        </option>
+        <!--<option value="{{Gender.Male}}" selected="selected">Male</option>
+        <option value="{{Gender.Female}}">Female</option>-->
     </select>
 </div>
 <h3>

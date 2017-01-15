@@ -12,8 +12,8 @@ var core_1 = require("@angular/core");
 var AppService = (function () {
     function AppService() {
     }
-    AppService.prototype.Salva = function (model) {
-        alert("salvato");
+    AppService.prototype.Save = function (model) {
+        alert("Done");
     };
     return AppService;
 }());

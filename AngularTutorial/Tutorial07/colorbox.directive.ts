@@ -1,28 +1,28 @@
-﻿import { Directive, ElementRef, HostListener, Input, Renderer } from '@angular/core';
+﻿import { Directive, ElementRef, HostListener, Input, Renderer } from "@angular/core";
 
 @Directive({
-    selector: '[colorbox]'
+    selector: "[colorbox]"
 })
 export class ColorBox {
 
     constructor(private el: ElementRef, private renderer: Renderer) { }
 
-    @Input('colorbox') color: string;
+    @Input("colorbox") color: string;
 
-    @HostListener('keyup') onClick() {
+    @HostListener("keyup") onClick(): void {
 
-        var size = (this.el.nativeElement as HTMLInputElement).value.length;
-        
+        var size: number = (this.el.nativeElement as HTMLInputElement).value.length;
+
         if (size > 20) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'red'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'red'");
         } else if (size > 15) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'violet'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'violet'");
         } else if (size > 10) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'orange'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'orange'");
         } else if (size > 5) {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'yellow'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'yellow'");
         } else {
-            this.renderer.setElementStyle(this.el.nativeElement, 'background-color', "'green'");
+            this.renderer.setElementStyle(this.el.nativeElement, "background-color", "'green'");
         }
 
     }

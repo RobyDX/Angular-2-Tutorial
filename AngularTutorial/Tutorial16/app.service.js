@@ -10,25 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var Utente = (function () {
-    function Utente(nome, cognome) {
-        this.nome = nome;
-        this.cognome = cognome;
+var User = (function () {
+    function User(name, surname) {
+        this.name = name;
+        this.surname = surname;
     }
-    return Utente;
+    return User;
 }());
-exports.Utente = Utente;
+exports.User = User;
 var AppService = (function () {
     function AppService(http) {
         this.http = http;
-        this.utenti = [];
-        this.utenti.push(new Utente("Mario", "Rossi"));
-        this.utenti.push(new Utente("Giuseppe", "Bianchi"));
-        this.utenti.push(new Utente("Carlo", "Verdi"));
-        this.utenti.push(new Utente("Antonio", "Rossi"));
+        this.users = [];
+        this.users.push(new User("John", "Doe"));
+        this.users.push(new User("Richard", "Miles"));
+        this.users.push(new User("Mary", "Major"));
+        this.users.push(new User("Jane", "Roe"));
     }
-    AppService.prototype.GetUtentByID = function (id) {
-        return this.utenti[id];
+    AppService.prototype.GetUserByID = function (id) {
+        return this.users[id];
     };
     return AppService;
 }());

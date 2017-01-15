@@ -9,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
     providers: [AppService]
 })
 export class AppComponent {
-    title: String = "Titolo";
+    title: String = "Title";
     constructor(private service: AppService) {
 
     }
@@ -23,7 +23,7 @@ export class AppComponent {
     providers: [AppService]
 })
 export class AppComponentA {
-    title: String = "Titolo";
+    title: String = "Title";
     constructor(private service: AppService, private route: ActivatedRoute) {
 
     }
@@ -32,7 +32,7 @@ export class AppComponentA {
 
 @Component({
     selector: "componentB",
-    template: "<h1>Ciao {{title}}</h1><p><a [routerLink]=\"['']\">Torna</a></p>",
+    template: "<h1>Hi {{title}}</h1><p><a [routerLink]=\"['']\">Back</a></p>",
     providers: [AppService]
 })
 export class AppComponentB implements OnInit {
@@ -45,6 +45,6 @@ export class AppComponentB implements OnInit {
 
         var key: string = "id";
         var id: number = this.route.snapshot.params[key] as number;
-        this.title = this.service.GetUtentByID(id).nome;
+        this.title = this.service.GetUserByID(id).name;
     }
 }

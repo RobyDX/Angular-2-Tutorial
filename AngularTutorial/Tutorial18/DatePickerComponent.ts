@@ -35,10 +35,10 @@ export class DatePickerComponent extends OnInit implements ControlValueAccessor 
     }
 
     ngOnInit(): void {
-        var t = this;
-        var input = this.el.nativeElement as HTMLInputElement;
+        var t: any = this;
+        var input: HTMLInputElement = this.el.nativeElement as HTMLInputElement;
         $(input).datepicker({
-            onSelect: function (date: string) {
+            onSelect: function (date: string): void {
                 t._current = date;
                 t.onBlur();
             }

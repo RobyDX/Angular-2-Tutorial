@@ -4,26 +4,26 @@
         border-width: 2px;
     }
 </style>
-<form [formGroup]="myform" novalidate (ngSubmit)="salva()">
+<form [formGroup]="myform" novalidate (ngSubmit)="save()">
     <div class="form-group">
-        <input type="text" class="form-control" formControlName="nome" placeholder="nome" />
-        <span [hidden]="myform.controls.nome.valid">Obbligatorio</span>
+        <input type="text" class="form-control" formControlName="name" placeholder="name" />
+        <span [hidden]="myform.controls.name.valid">Required</span>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" formControlName="cognome" placeholder="cognome" />
-        <span [hidden]="myform.controls.cognome.valid">Obbligatorio</span>
+        <input type="text" class="form-control" formControlName="surname" placeholder="surname" />
+        <span [hidden]="myform.controls.surname.valid">Required</span>
     </div>
     <div class="form-group">
         <input type="text" class="form-control" formControlName="email" placeholder="email" />
-        <span [hidden]="myform.controls.email.valid">Email non corretta</span>
+        <span [hidden]="myform.controls.email.valid">Invalid Email</span>
     </div>
-    <div class="form-group" formGroupName="indirizzo">
-        <input type="text" class="form-control" formControlName="via" placeholder="indirizzo" />
-        <span [hidden]="myform.controls.indirizzo.controls.via.valid">Obbligatorio</span>
+    <div class="form-group" formGroupName="address">
+        <input type="text" class="form-control" formControlName="street" placeholder="street" />
+        <span [hidden]="myform.controls.address.controls.street.valid">Required</span>
     </div>
-    <div class="form-group" formGroupName="indirizzo">
-        <input type="text" class="form-control" formControlName="civico" placeholder="civico" />
-        <span [hidden]="myform.controls.indirizzo.controls.civico.valid">Civico non corretto</span>
+    <div class="form-group" formGroupName="address">
+        <input type="text" class="form-control" formControlName="number" placeholder="number" />
+        <span [hidden]="myform.controls.address.controls.number.valid">Not valid number</span>
     </div>
-    <input type="submit" [disabled]="!myform.valid" value="salva" class="btn" />
+    <input type="submit" [disabled]="!myform.valid" value="save" class="btn" />
 </form>

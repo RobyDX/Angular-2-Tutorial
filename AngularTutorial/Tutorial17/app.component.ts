@@ -10,14 +10,13 @@ export class Persona {
     templateUrl: "AppComponent.html",
 })
 export class AppComponent {
-    messaggio: string = "";
+    message: string = "";
     constructor(private ref: ChangeDetectorRef, private element: ElementRef) {
 
     }
 
     ShowMessage(): void {
-        this.messaggio = "overlay";
         this.ref.detectChanges();
-        $('#myModal').modal('show');
+        $("#myModal").modal("show");
     }
 }

@@ -13,7 +13,7 @@ var AppService = (function () {
     function AppService() {
         this.modelsaved = [];
     }
-    AppService.prototype.Salva = function (model) {
+    AppService.prototype.Save = function (model) {
         this.modelsaved.push(model);
         return this.modelsaved.length;
     };

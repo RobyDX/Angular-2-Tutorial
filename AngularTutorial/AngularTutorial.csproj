@@ -158,7 +158,7 @@
     <TypeScriptCompile Include="Tutorial05\app.component.ts" />
     <TypeScriptCompile Include="Tutorial05\app.module.ts" />
     <TypeScriptCompile Include="Tutorial05\main.ts" />
-    <TypeScriptCompile Include="Tutorial05\Persona.ts" />
+    <TypeScriptCompile Include="Tutorial05\Person.ts" />
     <TypeScriptCompile Include="Tutorial05\tablerow.component.ts" />
     <TypeScriptCompile Include="Tutorial06\app.component.ts" />
     <TypeScriptCompile Include="Tutorial06\app.module.ts" />
@@ -173,7 +173,7 @@
     <TypeScriptCompile Include="Tutorial09\app.component.ts" />
     <TypeScriptCompile Include="Tutorial09\app.module.ts" />
     <TypeScriptCompile Include="Tutorial09\main.ts" />
-    <TypeScriptCompile Include="Tutorial09\persona.ts" />
+    <TypeScriptCompile Include="Tutorial09\person.ts" />
     <TypeScriptCompile Include="Tutorial09\userpipe.ts" />
     <TypeScriptCompile Include="Tutorial11\app.component.ts" />
     <TypeScriptCompile Include="Tutorial11\app.module.ts" />

@@ -9,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var Persona_1 = require("./Persona");
+var Person_1 = require("./Person");
 var TableRowComponent = (function () {
     function TableRowComponent() {
         this.delete = new core_1.EventEmitter();
     }
-    TableRowComponent.prototype.Elimina = function () {
+    TableRowComponent.prototype.Delete = function () {
         this.delete.emit(this.datarow);
     };
     return TableRowComponent;
 }());
 __decorate([
     core_1.Input(),
-    __metadata("design:type", Persona_1.Persona)
+    __metadata("design:type", Person_1.Person)
 ], TableRowComponent.prototype, "datarow", void 0);
 __decorate([
     core_1.Output(),

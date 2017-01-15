@@ -15,8 +15,8 @@ var http_1 = require("@angular/http");
 var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 exports.AppRoutes = [
-    { path: '', component: app_component_1.AppComponentA },
-    { path: 'contact/:id', component: app_component_1.AppComponentB }
+    { path: "", component: app_component_1.AppComponentA },
+    { path: "contact/:id", component: app_component_1.AppComponentB }
 ];
 var AppModule = (function () {
     function AppModule() {

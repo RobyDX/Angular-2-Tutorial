@@ -14,7 +14,7 @@ var router_1 = require("@angular/router");
 var AppComponent = (function () {
     function AppComponent(service) {
         this.service = service;
-        this.title = "Titolo";
+        this.title = "Title";
     }
     return AppComponent;
 }());
@@ -31,7 +31,7 @@ var AppComponentA = (function () {
     function AppComponentA(service, route) {
         this.service = service;
         this.route = route;
-        this.title = "Titolo";
+        this.title = "Title";
     }
     return AppComponentA;
 }());
@@ -53,14 +53,14 @@ var AppComponentB = (function () {
     AppComponentB.prototype.ngOnInit = function () {
         var key = "id";
         var id = this.route.snapshot.params[key];
-        this.title = this.service.GetUtentByID(id).nome;
+        this.title = this.service.GetUserByID(id).name;
     };
     return AppComponentB;
 }());
 AppComponentB = __decorate([
     core_1.Component({
         selector: "componentB",
-        template: "<h1>Ciao {{title}}</h1><p><a [routerLink]=\"['']\">Torna</a></p>",
+        template: "<h1>Hi {{title}}</h1><p><a [routerLink]=\"['']\">Back</a></p>",
         providers: [app_service_1.AppService]
     }),
     __metadata("design:paramtypes", [app_service_1.AppService, router_1.ActivatedRoute])

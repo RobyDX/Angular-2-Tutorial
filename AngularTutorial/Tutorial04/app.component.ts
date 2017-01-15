@@ -1,12 +1,12 @@
 ﻿import { Component } from "@angular/core";
 
-export class Persona {
-    nome: string = "";
-    cognome: string = "";
+export class Person {
+    name: string = "";
+    surname: string = "";
 
-    constructor(nome: string, cognome: string) {
-        this.nome = nome;
-        this.cognome = cognome;
+    constructor(name: string, surname: string) {
+        this.name = name;
+        this.surname = surname;
     }
 }
 
@@ -15,21 +15,21 @@ export class Persona {
     templateUrl: "AppComponent.html"
 })
 export class AppComponent {
-    items: Persona[] = [];
+    items: Person[] = [];
 
-    Aggiungi(nome: HTMLInputElement, cognome: HTMLInputElement): void {
+    Add(name: HTMLInputElement, surname: HTMLInputElement): void {
 
-        if (nome.validity.valid && cognome.validity.valid) {
-            this.items.push(new Persona(nome.value, cognome.value));
-            nome.value = "";
-            cognome.value = "";
+        if (name.validity.valid && surname.validity.valid) {
+            this.items.push(new Person(name.value, surname.value));
+            name.value = "";
+            surname.value = "";
 
         } else {
-            alert("Popolare i campi nome e cognome");
+            alert("Populate fields");
         }
     }
 
-    Elimina(index: number): void {
+    Delete(index: number): void {
         this.items.splice(index, 1);
     }
 }
